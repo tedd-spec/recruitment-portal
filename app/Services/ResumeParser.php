@@ -1,0 +1,1 @@
+namespace App\Services;\n\nclass ResumeParser {\n    public function parse($filePath) {\n        exec('pdftotext ' . escapeshellarg($filePath) . ' -', $output, $return_var);\n        if ($return_var === 0) {\n            return implode('\n', $output);\n        }\n        throw new \Exception('Failed to parse resume: Binary not found or not executable');\n    }\n}
