@@ -75,4 +75,4 @@ Route::get('storage/resumes/{file}', function ($file) {
 });
 
 require __DIR__.'/auth.php';
-\nRoute::post('/upload', [ResumeUploadController::class, 'upload'])->name('resume.upload');
+Route::post('/upload', [ResumeUploadController::class, 'upload'])->name('resume.upload');

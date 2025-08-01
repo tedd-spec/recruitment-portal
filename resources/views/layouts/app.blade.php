@@ -15,7 +15,7 @@
         body {
             background-color: #1a1a1a;
             color: #ffffff;
-            padding-top: 70px; /* Adjusted for fixed navbar height */
+            padding-top: 56px; /* Adjusted for fixed navbar height */
         }
         
         .navbar-brand img {
@@ -36,7 +36,7 @@
             height: 100vh;
             width: 250px;
             position: fixed;
-            top: 70px; /* Start below navbar */
+            top: 56px; /* Start below navbar */
             left: 0;
             background-color: #2d2d2d;
             border-right: 1px solid #404040;
@@ -76,7 +76,7 @@
         .content-wrapper {
             margin-left: 250px;
             padding: 20px;
-            min-height: calc(100vh - 70px); /* Ensure content takes full height minus navbar */
+            min-height: calc(100vh - 56px); /* Ensure content takes full height minus navbar */
             transition: all 0.3s;
         }
         

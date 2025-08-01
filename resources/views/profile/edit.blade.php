@@ -48,38 +48,6 @@
 
                         <!-- Profile Picture Section -->
                         <div class="row mb-4">
-                            <div class="col-md-3 text-center">
-                                <div class="position-relative d-inline-block">
-                                    <img src="{{ $user->profile_picture_url }}" 
-                                         alt="Profile Picture" 
-                                         class="rounded-circle border border-3 border-primary"
-                                         style="width: 120px; height: 120px; object-fit: cover;">
-                                    
-                                    @if($user->profile_picture)
-                                        <form method="POST" action="{{ route('profile.remove-picture') }}" class="d-inline">
-                                            @csrf
-                                            @method('delete')
-                                            <button type="submit" class="btn btn-sm btn-danger position-absolute top-0 end-0 rounded-circle" 
-                                                    style="width: 30px; height: 30px;" 
-                                                    onclick="return confirm('Remove profile picture?')">
-                                                <i class="bi bi-x"></i>
-                                            </button>
-                                        </form>
-                                    @endif
-                                </div>
-                                
-                                <div class="mt-3">
-                                    <label for="profile_picture" class="btn btn-outline-primary btn-sm">
-                                        <i class="bi bi-camera me-1"></i>Change Photo
-                                    </label>
-                                    <input type="file" id="profile_picture" name="profile_picture" 
-                                           class="d-none" accept="image/*" onchange="previewImage(this)">
-                                    <div class="form-text">JPG, PNG, GIF up to 2MB</div>
-                                    @error('profile_picture')
-                                        <div class="text-danger small">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                            </div>
                             
                             <div class="col-md-9">
                                 <div class="row">
